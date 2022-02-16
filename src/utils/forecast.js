@@ -14,11 +14,13 @@ const forecast = (latitude, longitude, callback) => {
         temperature,
         weather_descriptions: [condition],
         feelslike,
+        wind_speed: windSpeed,
+        wind_dir: windDir,
       } = body.current;
 
       callback(
         undefined,
-        `${condition}, and the temperature is ${temperature}°. It feels like ${feelslike}°.`
+        `It is currently ${condition.toLowerCase()}. The temperature is ${temperature}° with winds from the ${windDir} at ${windSpeed} mph. It feels like ${feelslike}°.`
       );
     }
   });
