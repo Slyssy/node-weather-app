@@ -10,7 +10,7 @@ const forecastMessage = document.querySelector('.forecast__msg');
 weatherForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const search = address.value;
-  const url = `http://localhost:3000/weather?address=${search}`;
+  const url = `/weather?address=${search}`;
 
   //*By setting the values to these elements before we call fetch, we ensure the
   //*elements are cleared after each time we click submit.
