@@ -18,7 +18,7 @@ const forecast = (latitude, longitude, callback) => {
 
       callback(
         undefined,
-        `For the location indicated above, it is currently ${condition}, and the temperature is ${temperature}°. It feels like ${feelslike}°.`
+        `${condition}, and the temperature is ${temperature}°. It feels like ${feelslike}°.`
       );
     }
   });
